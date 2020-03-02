@@ -169,6 +169,7 @@
     "yargs": "^3.23.0"
   },
   "packageDependencies": {
+	"Drink_Water_Bot": "file:./packages/Drink_Water_Bot",
     "atom-dark-syntax": "file:./packages/atom-dark-syntax",
     "atom-dark-ui": "file:./packages/atom-dark-ui",
     "atom-light-syntax": "file:./packages/atom-light-syntax",
