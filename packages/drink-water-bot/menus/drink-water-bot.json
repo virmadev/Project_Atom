@@ -3,7 +3,7 @@
     "atom-text-editor": [
       {
         "label": "Toggle Drink_Water_Bot",
-        "command": "Drink_Water_Bot:toggle"
+        "command": "drink-water-bot:toggle"
       }
     ]
   },
@@ -16,7 +16,7 @@
           "submenu": [
             {
               "label": "Toggle",
-              "command": "Drink_Water_Bot:toggle"
+              "command": "drink-water-bot:toggle"
             }
           ]
         }

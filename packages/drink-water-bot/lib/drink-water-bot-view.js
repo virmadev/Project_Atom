@@ -1,11 +1,11 @@
 'use babel';
 
-export default class Drink_Water_BotView {
+export default class DrinkWaterBotView {
 
   constructor(serializedState) {
     // Create root element
     this.element = document.createElement('div');
-    this.element.classList.add('Drink_Water_Bot');
+    this.element.classList.add('drink-water-bot');
 
     // Create message element
     const message = document.createElement('div');
@@ -22,7 +22,7 @@ export default class Drink_Water_BotView {
         }
         if (minutes < 1){
           message.innerHTML = `
-            <center><h2>${'Drink_Water_Bot'}</h2></center>
+            <center><h2>${'drink-water-bot'}</h2></center>
             <ul>
               <li> You have been coding ${seconds} seconds. You should have been drinking ${Math.round((timerClock * drinkMultiplier)*100)/100} milliliters of water.</li>
             </ul>
@@ -30,7 +30,7 @@ export default class Drink_Water_BotView {
         }
         else {
           message.innerHTML = `
-            <center><h2>${'Drink_Water_Bot'}</h2></center>
+            <center><h2>${'drink-water-bot'}</h2></center>
             <ul>
               <li> You have been coding ${minutes} minutes and ${seconds} seconds. You should have been drinking ${Math.round((timerClock * drinkMultiplier)*100)/100} milliliters of water.</li>
             </ul>
@@ -49,7 +49,7 @@ export default class Drink_Water_BotView {
     return {
       // This is used to look up the deserializer function. It can be any string, but it needs to be
       // unique across all packages!
-      deserializer: 'Drink_Water_Bot/Drink_Water_BotView'
+      deserializer: 'drink-water-bot/DrinkWaterBotView'
     };
   }
 
@@ -64,12 +64,12 @@ export default class Drink_Water_BotView {
   }
   getTitle() {
     // Used by Atom for tab text
-    return 'Drink_Water_Bot';
+    return 'drink-water-bot';
   }
 
   getURI() {
     // Used by Atom to identify the view when toggling.
-    return 'atom://Drink_Water_Bot';
+    return 'atom://drink-water-bot';
   }
   getDefaultLocation() {
   // This location will be used if the user hasn't overridden it by dragging the item elsewhere.
