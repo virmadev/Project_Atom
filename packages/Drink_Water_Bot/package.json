@@ -2,6 +2,7 @@
   "name": "Drink_Water_Bot",
   "main": "./lib/Drink_Water_Bot",
   "version": "0.0.1",
+  "repository": "https://github.com/atom/atom",
   "description": "Reminder to drink water",
   "keywords": [
   ],
@@ -17,5 +18,17 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+  },
+  "standard": {
+    "env": [
+      "browser",
+      "node",
+      "atomtest",
+      "jasmine"
+    ],
+    "globals": [
+      "atom"
+    ]
   }
+  
 }

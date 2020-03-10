@@ -1,0 +1,19 @@
+{
+  "name": "weather-today",
+  "main": "./lib/weather-today",
+  "version": "0.0.0",
+  "description": "Shows current weather from selected city",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "weather-today:getWeather"
+  },
+  "repository": "https://github.com/atom/weather-today",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "request": "^2.88.2",
+    "weather-js": "^2.0.0"
+  }
+}

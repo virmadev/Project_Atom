@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Get weather",
+        "command": "weather-today:getWeather"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "WeatherToday",
+          "submenu": [
+            {
+              "label": "Get weather",
+              "command": "weather-today:getWeather"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
