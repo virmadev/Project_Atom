@@ -1,0 +1,15 @@
+{
+  "name": "tetris-game",
+  "main": "./lib/tetris-game",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "tetris-game:toggle"
+  },
+  "repository": "https://github.com/atom/tetris-game",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

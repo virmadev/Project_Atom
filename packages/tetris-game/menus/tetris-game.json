@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle tetris-game",
+        "command": "tetris-game:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Tetris Game",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "tetris-game:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
