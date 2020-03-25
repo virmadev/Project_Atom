@@ -27,23 +27,27 @@ export default {
   },
 
   getWeather() {
-    console.log('WeatherToday was toggled!');
+    console.log('WeatherToday was toggled');
     let editor
     if (editor = atom.workspace.getActiveTextEditor()) {
       let selection = editor.getSelectedText()
       weather.find({search: selection, degreeType: 'C'}, function(err, result) {
         if(err) {
-
           atom.notifications.addWarning("City not found, please check your selection");
         }
         else {
           var json = JSON.stringify(result, null, 2)
           var obj = JSON.parse(json);
           console.log(obj);
-          var resultString = "****************************\n" + obj[0].current.date + "\n" + obj[0].current.observationpoint
-          + "\nTemperature: " + obj[0].current.temperature + " C, " + obj[0].current.skytext + "\nHumidity: " +
-          obj[0].current.humidity + "\nWindspeed: " + obj[0].current.windspeed + "\n****************************"
-          atom.notifications.addSuccess("WeatherToday",{detail: resultString});
+		  if(obj.length == 0) {
+            atom.notifications.addWarning("City not found, please check your selection");
+          }
+          else {
+            var resultString = "****************************\n" + obj[0].current.date + "\n" + obj[0].current.observationpoint
+            + "\nTemperature: " + obj[0].current.temperature + " C, " + obj[0].current.skytext + "\nHumidity: " +
+            obj[0].current.humidity + "\nWindspeed: " + obj[0].current.windspeed + "\n****************************"
+            atom.notifications.addSuccess("WeatherToday",{detail: resultString});
+          }
         }
       });
     }

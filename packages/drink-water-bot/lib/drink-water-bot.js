@@ -1,6 +1,6 @@
 'use babel';
 
-import Drink_Water_BotView from './Drink_Water_Bot-view';
+import DrinkWaterBotView from './drink-water-bot-view';
 import { CompositeDisposable, Disposable } from 'atom';
 
 export default {
@@ -11,28 +11,28 @@ export default {
     this.subscriptions = new CompositeDisposable(
       // Add an opener for our view.
       atom.workspace.addOpener(uri => {
-        if (uri === 'atom://Drink_Water_Bot') {
-          return new Drink_Water_BotView();
+        if (uri === 'atom://drink-water-bot') {
+          return new DrinkWaterBotView();
         }
       }),
 
       // Register command that toggles this view
       atom.commands.add('atom-workspace', {
-        'Drink_Water_Bot:toggle': () => this.toggle()
+        'drink-water-bot:toggle': () => this.toggle()
       }),
 
       // Destroy any ActiveEditorInfoViews when the package is deactivated.
       new Disposable(() => {
         atom.workspace.getPaneItems().forEach(item => {
-          if (item instanceof Drink_Water_BotView) {
+          if (item instanceof DrinkWaterBotView) {
             item.destroy();
           }
         });
       })
     );
   },
-  deserializeDrink_Water_BotView(serialized) {
-    return new Drink_Water_BotView();
+  deserializeDrinkWaterBotView(serialized) {
+    return new DrinkWaterBotView();
   },
 
   deactivate() {
@@ -40,7 +40,7 @@ export default {
   },
 
   toggle() {
-     atom.workspace.toggle('atom://Drink_Water_Bot');
+     atom.workspace.toggle('atom://drink-water-bot');
    }
 
 };

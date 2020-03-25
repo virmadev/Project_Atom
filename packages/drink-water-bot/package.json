@@ -1,18 +1,18 @@
 {
-  "name": "Drink_Water_Bot",
-  "main": "./lib/Drink_Water_Bot",
+  "name": "drink-water-bot",
+  "main": "./lib/drink-water-bot",
   "version": "0.0.1",
   "repository": "https://github.com/atom/atom",
   "description": "Reminder to drink water",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "Drink_Water_Bot:toggle"
+    "atom-workspace": "drink-water-bot:toggle"
   },
   "deserializers": {
-    "Drink_Water_Bot/Drink_Water_BotView": "deserializeDrink_Water_BotView"
+    "drink-water-bot/DrinkWaterBotView": "deserializeDrinkWaterBotView"
   },
-  "repository": "https://github.com/atom/Drink_Water_Bot",
+  "repository": "https://github.com/atom/drink-water-bot",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

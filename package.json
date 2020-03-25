@@ -17,8 +17,6 @@
     "@atom/nsfw": "1.0.26",
     "@atom/source-map-support": "^0.3.4",
     "@atom/watcher": "1.3.1",
-    "Drink_Water_Bot": "file:packages/Drink_Water_Bot",
-	"weather-today": "file:packages/weather-today",
     "about": "file:packages/about",
     "archive-view": "https://www.atom.io/api/packages/archive-view/versions/0.65.2/tarball",
     "async": "0.2.6",
@@ -173,8 +171,6 @@
     "yargs": "^3.23.0"
   },
   "packageDependencies": {
-    "Drink_Water_Bot": "file:./packages/Drink_Water_Bot",
-	"weather-today": "file:packages/weather-today",
     "atom-dark-syntax": "file:./packages/atom-dark-syntax",
     "atom-dark-ui": "file:./packages/atom-dark-ui",
     "atom-light-syntax": "file:./packages/atom-light-syntax",
